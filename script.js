@@ -311,8 +311,14 @@ for (let i = 20; i >=1; i--)
     }
 
   //Question 5
-  let arr = [4, 10, 2,8];
-  console.log(arr[1]);
+  let array = [4, 10, 2,8];
+  let largest = [3]
+  for (let i = 0; i < array.length; i++) {
+ if (array[i]> largest) {
+    largest = array[i]
+ }
+  }
+  console.log(largest)
 
 //Question 6
 let fruits = ["apple", "banana", "orange", "mango"];
