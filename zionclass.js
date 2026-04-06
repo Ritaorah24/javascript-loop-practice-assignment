@@ -123,3 +123,92 @@
 // //reduce method
 // const reducedNumbers=no.reduce((sum,num)=>sum+num,0)
 // console.log(reducedNumbers)
+
+//Array destructuring 
+const numArray = [1,2,3,3,4,5,6,7] 
+const [,,,,fourth] = numArray
+console.log(fourth)
+
+//object destructuring
+const user ={
+    name: "Alex",
+    age: 15,
+    country: "Nigeria",
+}
+const {name,age,country} = user
+console.log(name,age,country)
+
+//spread operator
+//for arrays
+const a = [1,2]
+const b = [3,4]
+const c = [...a,...b]
+console.log(c)
+
+//for object 
+const newUser ={
+    food: "Beans",...user 
+}
+console.log(newUser)
+
+//rest operator
+const sum = (...nums) => {
+//    return nums.reduce((sum,nums)=>sum + nums,0);
+console.log(nums)
+}
+sum(2,4,5,6)
+
+//Template literals using backticks
+const colour = "Red"
+console.log(`Hello ${colour}`)
+
+//Classwork on array spread + destructuring
+const arr = [2,4,6]
+const newArr = [1, ...arr]
+console.log(newArr)
+const [one, second] = newArr
+console.log(one,second)
+
+// classwork on rest + destructuring
+const arrNum = [10,20,30,40]
+const [first,sec,...rest] = arrNum
+console.log(first,rest)
+console.log(first,sec,rest)
+
+//classwork object spread + destructuring
+const phone ={
+    brand: "iphone",
+    color: "gold",
+    size: "6.7in"
+}
+const updated ={
+    storage:"256GB",...phone
+}
+console.log(updated)
+
+const{storage,size="6.6in"} = updated
+console.log(size)
+
+//nested object + destructuring
+const user1 ={
+name: "Brian",
+skills: ["singing","dancing"],
+}
+const updatedUser = {
+    ...user1,
+    skills:[ "swimming",...user1.skills]
+}
+console.log(updatedUser)
+const{skills} = updatedUser
+console.log({skills})
+
+//function + rest
+const users={
+    name:"Ruth",
+    age: "40",
+    city:"lagos",
+}
+function display({name,age,...rest}) {
+    console.log(name,age,rest)
+}
+display(users)
