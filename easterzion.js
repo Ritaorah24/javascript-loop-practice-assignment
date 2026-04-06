@@ -144,7 +144,7 @@ return newUser;
 
 console.log(cloneUser(user));
 
-// EXPLANATION 
+// NO 6 EXPLANATION 
 /* The original object stays unchanged because the spread 
 operator creates a shallow copy. Instead of duplicating 
 the memory address, both objects still reference the 
